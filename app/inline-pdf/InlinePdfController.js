@@ -18,6 +18,7 @@ angular.module('inlinePdf', ['ngRoute'])
       var pdfFileLocation = './media/report_20150621_202139_single.pdf',
           currPage = 1,
           numPages = 0,
+          canvasLocation,
           canvas,
           thePDF;
 
@@ -43,9 +44,11 @@ angular.module('inlinePdf', ['ngRoute'])
             context,
             renderCanvas;
 
+        canvasLocation = document.getElementById('pdfCanvas');
         canvas = document.createElement("canvas");
         canvas.style.display = "block";
         canvas.style.border = "1px solid black";
+        canvas.className = "text-center";
 
         canvas.height = viewport.height;
         canvas.width = viewport.width;

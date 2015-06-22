@@ -11,6 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -21,7 +24,23 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view ng-app="myApp"></div>
+  <div ng-view ng-app="myApp">
+    <div class="row">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12 text-center" id="pdfCanvas">
+            An inline rendered PDF.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+
+    </div>
+
+  </div>
 
 
   <!-- In production use:
@@ -29,14 +48,11 @@
   -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/pdfjs-bower/dist/compatibility.js"></script>
   <script src="bower_components/pdfjs-bower/dist/pdf.js"></script>
   <script src="app.js"></script>
   <script src="inline-pdf/InlinePdfController.js"></script>
-
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>
